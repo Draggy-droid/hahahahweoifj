@@ -1,0 +1,161 @@
+(function () {
+  'use strict';
+
+  function _0x41d68c(_0xf25519, _0x5da9ea) {
+    const _0x302033 = localStorage.getItem(_0xf25519);
+    return _0x302033 === null ? _0x5da9ea : _0x302033;
+  }
+  function _0x43474a(_0xd536b, _0x3d4b77) {
+    localStorage.setItem(_0xd536b, _0x3d4b77);
+  }
+  function _0x1a03cc() {
+    let _0x211d59 = document.createElement("canvas");
+    let _0x21b9ce = _0x211d59.getContext('2d');
+    _0x21b9ce.textBaseline = "top";
+    _0x21b9ce.font = "14px 'Arial'";
+    _0x21b9ce.fillStyle = "#f60";
+    _0x21b9ce.fillRect(125, 1, 62, 20);
+    _0x21b9ce.fillStyle = "#069";
+    _0x21b9ce.fillText("HWID", 2, 15);
+    _0x21b9ce.fillStyle = "rgba(102, 204, 0, 0.7)";
+    _0x21b9ce.fillText("HWID", 4, 17);
+    let _0x45120a = 0;
+    let _0x58c30e = _0x211d59.toDataURL();
+    for (let _0x5299a0 = 0; _0x5299a0 < _0x58c30e.length; _0x5299a0++) {
+      _0x45120a = _0x58c30e.charCodeAt(_0x5299a0) + ((_0x45120a << 5) - _0x45120a);
+    }
+    return (_0x45120a & _0x45120a).toString(16);
+  }
+  function _0x4193d4() {
+    let _0xf265cb = _0x41d68c("hwid");
+    if (!_0xf265cb) {
+      _0xf265cb = _0x1a03cc();
+      _0x43474a("hwid", _0xf265cb);
+    }
+    return _0xf265cb;
+  }
+  function _0x3330ec(_0x313e0e) {
+    const _0x33bdcd = _0x313e0e?.["match"](/(\d+)([smhdw]|year)/);
+    if (!_0x33bdcd) {
+      return null;
+    }
+    const _0x18b4e9 = parseInt(_0x33bdcd[1]);
+    const _0x1fe5a1 = _0x33bdcd[2];
+    const _0x570aa9 = Date.now();
+    const _0x402a58 = {
+      's': 0x3e8,
+      'm': 60000,
+      'h': 3600000,
+      'd': 86400000,
+      'w': 604800000,
+      'year': 31536000000
+    }[_0x1fe5a1];
+    return _0x570aa9 + _0x18b4e9 * _0x402a58;
+  }
+  function _0x14d51a() {
+    const _0x32649b = document.createElement("div");
+    _0x32649b.id = "key-modal";
+    _0x32649b.innerHTML = "\n      <div class=\"protected-label\">Cracked by baba yaga (Draggy)</div>\n      <h2>Welcome!</h2>\n      <p>Absolute Hack Spring UPDATE! - CRACKED</p>\n      <button id=\"login-btn\">Login</button>\n      <input type=\"text\" id=\"key-input\" placeholder=\"Enter any key\">\n      <input type=\"password\" id=\"password-input\" placeholder=\"Enter any password\">\n      <div class=\"save-controls\">\n        <button id=\"save-login-btn\">Save Login</button>\n        <button id=\"clear-login-btn\">Clear Login</button>\n      </div>\n      <p class=\"key-info\">Cracked version - no key required</p>\n      <p id=\"hwid-info\" style=\"font-size: 10px; margin-top: 5px; color: #999;\"></p>\n    ";
+    document.body.appendChild(_0x32649b);
+    document.getElementById("hwid-info").textContent = "HWID: " + _0x4193d4();
+    document.getElementById("login-btn").addEventListener("click", _0x4d7dfb);
+    
+    // Автозаполнение случайными данными для удобства
+    document.getElementById("key-input").value = "CRACKED_" + Math.random().toString(36).substr(2, 8);
+    document.getElementById("password-input").value = "BABA_YAGA_" + Math.random().toString(36).substr(2, 6);
+  }
+  
+  // МОДИФИЦИРОВАННАЯ ФУНКЦИЯ ЛОГИНА - ОБХОД ЗАЩИТЫ
+  function _0x4d7dfb() {
+    const _0xbf1b75 = document.getElementById("key-input").value.trim();
+    const _0x2dc091 = document.getElementById("password-input").value.trim();
+    
+    if (!_0xbf1b75 || !_0x2dc091) {
+      alert("Please enter both fields (any value will work)");
+      return;
+    }
+    
+    // ОБХОД ПРОВЕРКИ - ЛЮБЫЕ ДАННЫЕ ПРИНИМАЮТСЯ
+    _0x43474a("savedKey", _0xbf1b75);
+    _0x43474a("savedPassword", _0x2dc091);
+    
+    alert("✅ Access granted! Loading cracked script...");
+    _0x39450c();
+  }
+  
+  function _0x39450c() {
+    const _0x4b7921 = document.createElement("script");
+    _0x4b7921.src = "https://ewfaq.ru/script.js?v=" + Date.now();
+    _0x4b7921.onload = () => {
+      console.log("Main script loaded successfully - CRACKED VERSION");
+      const _0xfe3a28 = document.getElementById("key-modal");
+      if (_0xfe3a28) {
+        _0xfe3a28.style.display = "none";
+      }
+    };
+    _0x4b7921.onerror = () => {
+      // Fallback если основной скрипт недоступен
+      alert("Main script not available, but crack is active!");
+      const _0xfe3a28 = document.getElementById("key-modal");
+      if (_0xfe3a28) {
+        _0xfe3a28.style.display = "none";
+      }
+    };
+    document.body.appendChild(_0x4b7921);
+  }
+
+  const _0x1a10e3 = document.createElement("style");
+  _0x1a10e3.textContent = "\n    #key-modal {\n      position: fixed;\n      top: 50%;\n      left: 50%;\n      transform: translate(-50%, -50%);\n      background-color: rgba(47,47,47,0.85);\n      padding: 20px;\n      border-radius: 8px;\n      box-shadow: 0 0 10px rgba(0,0,0,0.5);\n      z-index: 1000;\n      font-family: 'Arial', sans-serif;\n      color: white;\n      width: 340px;\n      max-width: 90%;\n      display: flex;\n      flex-direction: column;\n      align-items: center;\n      user-select: none;\n    }\n    #key-modal h2 {\n      margin-bottom: 10px;\n      text-align: center;\n      font-weight: bold;\n      font-size: 26px;\n    }\n    #key-modal p {\n      text-align: center;\n      margin-bottom: 12px;\n      font-size: 15px;\n      color: #ccc;\n    }\n    #key-modal input, #key-modal button {\n      padding: 12px;\n      margin-bottom: 12px;\n      border-radius: 5px;\n      border: none;\n      width: 100%;\n      box-sizing: border-box;\n      cursor: pointer;\n      font-size: 16px;\n      transition: all 0.3s ease;\n      outline: none;\n    }\n    #key-modal button {\n      background: linear-gradient(to right, #4CAF50, #45a049);\n      color: white;\n      font-weight: bold;\n      text-align: center;\n      padding: 14px;\n    }\n    #key-modal input {\n      background-color: rgba(69,69,69,0.8);\n      color: white;\n    }\n    #key-modal input::placeholder {\n      color: #ddd;\n    }\n    #key-modal .protected-label {\n      position: absolute;\n      top: 5px;\n      right: 5px;\n      color: #FFD700;\n      font-size: 12px;\n      text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);\n      font-weight: bold;\n    }\n    #key-modal .key-info {\n      font-size: 12px;\n      margin-top: 15px;\n      text-align: center;\n      white-space: pre-wrap;\n      word-break: break-all;\n      color: #4CAF50;\n      line-height: 1.4;\n      font-weight: bold;\n    }\n    #key-modal .save-controls {\n      display: flex;\n      justify-content: space-around;\n      width: 100%;\n      margin-top: 10px;\n    }\n    #key-modal .save-controls button {\n      padding: 10px;\n      margin-bottom: 0;\n      font-size: 14px;\n      flex: 1;\n      margin: 5px;\n    }\n  ";
+  document.head.appendChild(_0x1a10e3);
+  
+  // Автоматический запуск
+  setTimeout(_0x14d51a, 1000);
+})();
+
+// Original right-click attack system
+(function() {
+    'use strict';
+    
+    let isRightClickHeld = false;
+    let animationFrameRequest = null;
+    
+    const attackLoop = () => {
+        if (isRightClickHeld && window.skillUse) {
+            window.skillUse();
+            animationFrameRequest = requestAnimationFrame(attackLoop);
+        }
+    };
+    
+    document.addEventListener('mousedown', (e) => {
+        if (e.button === 2) {
+            isRightClickHeld = true;
+            if (window.skillUse) {
+                window.skillUse();
+                animationFrameRequest = requestAnimationFrame(attackLoop);
+            }
+        }
+    });
+    
+    document.addEventListener('mouseup', (e) => {
+        if (e.button === 2) {
+            isRightClickHeld = false;
+            if (animationFrameRequest) {
+                cancelAnimationFrame(animationFrameRequest);
+                animationFrameRequest = null;
+            }
+            if (window.skillStop) window.skillStop();
+        }
+    });
+    
+    document.addEventListener('contextmenu', (e) => {
+        if (isRightClickHeld) {
+            e.preventDefault();
+        }
+    });
+})();
+
+// Echolocation
+function echolocation() {
+    visionType = 1;
+}
+setInterval(echolocation, 0);
