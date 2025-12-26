@@ -55,7 +55,7 @@
   function _0x14d51a() {
     const _0x32649b = document.createElement("div");
     _0x32649b.id = "key-modal";
-    _0x32649b.innerHTML = "\n      <div class=\"protected-label\">Cracked by baba yaga (Draggy)</div>\n      <h2>Welcome!</h2>\n      <p>Absolute Hack Spring UPDATE! - CRACKED</p>\n      <button id=\"login-btn\">Login</button>\n      <input type=\"text\" id=\"key-input\" placeholder=\"Enter any key\">\n      <input type=\"password\" id=\"password-input\" placeholder=\"Enter any password\">\n      <div class=\"save-controls\">\n        <button id=\"save-login-btn\">Save Login</button>\n        <button id=\"clear-login-btn\">Clear Login</button>\n      </div>\n      <p class=\"key-info\">Cracked version - no key required</p>\n      <p id=\"hwid-info\" style=\"font-size: 10px; margin-top: 5px; color: #999;\"></p>\n    ";
+    _0x32649b.innerHTML = "\n      <div class=\"protected-label\">Cracked by baba yaga</div>\n      <h2>Welcome!</h2>\n      <p>Absolute Hack Spring UPDATE! - CRACKED</p>\n      <button id=\"login-btn\">Login</button>\n      <input type=\"text\" id=\"key-input\" placeholder=\"Enter any key\">\n      <input type=\"password\" id=\"password-input\" placeholder=\"Enter any password\">\n      <div class=\"save-controls\">\n        <button id=\"save-login-btn\">Save Login</button>\n        <button id=\"clear-login-btn\">Clear Login</button>\n      </div>\n      <p class=\"key-info\">Cracked version - no key required</p>\n      <p id=\"hwid-info\" style=\"font-size: 10px; margin-top: 5px; color: #999;\"></p>\n    ";
     document.body.appendChild(_0x32649b);
     document.getElementById("hwid-info").textContent = "HWID: " + _0x4193d4();
     document.getElementById("login-btn").addEventListener("click", _0x4d7dfb);
